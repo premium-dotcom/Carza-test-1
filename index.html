@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CARZA — a smarter South African car marketplace.">
+  <title>CARZA — Find your next car</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#"><span>CA</span>RZA</a>
+    <nav>
+      <a href="#cars">Browse cars</a><a href="#dealers">Dealers</a><a href="#how">How it works</a>
+    </nav>
+    <div class="nav-right">
+      <button class="text-btn" id="savedBtn">♡ Saved <b id="savedCount">0</b></button>
+      <button class="dark-btn" data-open-dealer>List your stock</button>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="pill"><i></i> Built for South African car buyers</div>
+      <h1>The smarter way<br>to <em>find a car.</em></h1>
+      <p>Search great vehicles, compare the details that matter and contact dealers directly. No marketplace nonsense.</p>
+    </div>
+
+    <div class="search-panel">
+      <div class="search-top">
+        <div class="search-tabs"><button class="active">Cars</button><button id="dealerSearchTab">Dealers</button></div>
+        <span class="search-hint">Try: Toyota Fortuner, BMW, SUV...</span>
+      </div>
+      <div class="search-fields">
+        <label><small>MAKE / MODEL</small><input id="query" placeholder="What are you looking for?"></label>
+        <label><small>LOCATION</small><select id="location"><option value="">Any location</option><option>Johannesburg</option><option>Pretoria</option><option>Cape Town</option><option>Durban</option></select></label>
+        <label><small>MAX PRICE</small><select id="price"><option value="">Any price</option><option value="200000">R200,000</option><option value="300000">R300,000</option><option value="400000">R400,000</option><option value="500000">R500,000</option><option value="750000">R750,000</option></select></label>
+        <button class="search-btn" id="search">Search <span>→</span></button>
+      </div>
+      <div class="quick"><button data-filter="SUV">SUVs</button><button data-filter="Automatic">Automatics</button><button data-filter="under200">Under R200k</button><button data-filter="new">2024+</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap trust-grid">
+    <div><strong>Dealer-first</strong><span>Simple tools & fair pricing</span></div>
+    <div><strong>Direct contact</strong><span>Call or WhatsApp sellers</span></div>
+    <div><strong>Smart search</strong><span>Find your match faster</span></div>
+    <div><strong>South African</strong><span>Built around local buyers</span></div>
+  </div>
+</section>
+
+<section class="section" id="cars">
+  <div class="wrap">
+    <div class="section-head">
+      <div><small class="eyebrow">DISCOVER</small><h2>Cars worth a look</h2><p id="resultInfo">Featured vehicles from the CARZA launch inventory.</p></div>
+      <select class="sort" id="sort"><option value="featured">Featured</option><option value="low">Price: low → high</option><option value="high">Price: high → low</option><option value="year">Newest</option><option value="km">Lowest mileage</option></select>
+    </div>
+    <div class="cars" id="carsGrid"></div>
+    <div class="empty hidden" id="empty"><h3>No matching cars</h3><p>Try removing a filter or searching for a broader model.</p><button class="dark-btn" id="clear">Clear search</button></div>
+  </div>
+</section>
+
+<section class="smart">
+  <div class="wrap smart-inner">
+    <div><small class="eyebrow light">THE BIG IDEA</small><h2>CARZA SmartMatch™</h2><p>Eventually, buyers won't just search for cars. They'll tell CARZA their budget, lifestyle and must-haves — and CARZA will rank the best matches.</p></div>
+    <div class="match"><div class="score">94<small>% match</small></div><div><b>Toyota Fortuner</b><span>Great fit for your preferences</span></div></div>
+  </div>
+</section>
+
+<section class="section" id="dealers">
+  <div class="wrap">
+    <div class="section-head">
+      <div><small class="eyebrow">FOR DEALERS</small><h2>Put your stock where buyers are.</h2><p>CARZA is designed around dealership leads, simple stock management and direct customer contact.</p></div>
+      <button class="outline-btn" data-open-dealer>Become a CARZA dealer →</button>
+    </div>
+    <div class="dealer-cards" id="dealerGrid"></div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="center"><small class="eyebrow">HOW IT WORKS</small><h2>Search. Compare. Connect.</h2></div>
+    <div class="steps">
+      <article><b>01</b><h3>Search smarter</h3><p>Filter by make, model, price, mileage, location and more.</p></article>
+      <article><b>02</b><h3>Compare confidently</h3><p>See the information that actually helps you make a decision.</p></article>
+      <article><b>03</b><h3>Contact directly</h3><p>Call or WhatsApp the dealership without unnecessary friction.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="wrap launch">
+  <div><small class="eyebrow">DEALERSHIP LAUNCH</small><h2>Be one of the first dealerships on CARZA.</h2><p>Early dealerships can help shape the platform while getting launch exposure.</p></div>
+  <button class="dark-btn" data-open-dealer>Join the launch →</button>
+</section>
+</main>
+
+<footer><div class="wrap footer"><div><a class="logo" href="#"><span>CA</span>RZA</a><p>A smarter way to buy and sell cars in South Africa.</p></div><div class="footer-links"><a href="#cars">Cars</a><a href="#dealers">Dealers</a><a href="#how">How it works</a></div><small>© 2026 CARZA Prototype</small></div></footer>
+
+<div class="modal hidden" id="modal"><div class="backdrop" data-close></div><div class="modal-box"><button class="close" data-close>×</button><div id="modalBody"></div></div></div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
